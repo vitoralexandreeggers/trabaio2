@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>pizza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Monte seu pedido de entrega</h1>
+
+<fieldset>
+    <legend>informações pessoais</legend>
+  <form id="formViagem">
+    <label>Nome do cliente: <input type="text" id="nome"></label><br>
+    <label>Endereço do cliente: <input type="text" id="endereco"></label><br>
+    <label>Cpf do cliente: <input type="password" id="cepeefe"></label><br>
+
+    <label>forma de pagamento:
+      <select id="pagamento">
+        <option value="Cartao">cartão</option>
+        <option value="Pix">pix</option>
+        <option value="Dinheiro">dinheiro fisico</option>
+        <option value="Paypal">paypal</option>
+        <option value="PicPay">picpay</option>
+      </select>
+    </label>
+
+    </fieldset>
+    
+    <br>
+
+<fieldset>
+    <legend>pedido</legend>
+    <label>Sabores:
+      <select id="sabor"></select>
+    </label>
+    
+    <br>
+
+    <label>tamanho:
+      <select id="tamanho"></select>
+    </label> 
+    
+    <br>
+
+    <label>bebidas:
+      <select id="bebida"></select>
+    </label><br>
+
+
+</fieldset>
+
+<br>
+
+
+    <button type="button" onclick="gerarRelatorio()">Gerar Relatório</button>
+  </form>
+
+  <hr>
+
+  <div id="relatorio"></div>
+
+  <br>
+  <button onclick="window.print()">Gerar PDF do Relatório</button>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
