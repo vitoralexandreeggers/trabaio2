@@ -84,9 +84,9 @@ function gerarRelatorio() {
         <p><strong>endereço do cliente:</strong> ${enderecodocliente}</p>
         <p><strong>cpf do cliente:</strong> ${cepefe}</p>
         <p><strong>forma de pagamento:</strong> ${pagamento}</p>
-        <p><strong>Transporte:</strong> ${saborr.nome} - R$ ${custoSabor.toFixed(2)}</p>
-        <p><strong>Hospedagem:</strong> ${tamanhoo.nome} - R$ ${custoTamanho.toFixed(2)}</p>
-        <p><strong>Refeição:</strong> ${bebidaa.nome} - R$ ${custoBebidas.toFixed(2)}</p>
+        <p><strong>sabor:</strong> ${saborr.nome} - R$ ${custoSabor.toFixed(2)}</p>
+        <p><strong>tamanho:</strong> ${tamanhoo.nome} - R$ ${custoTamanho.toFixed(2)}</p>
+        <p><strong>bebida:</strong> ${bebidaa.nome} - R$ ${custoBebidas.toFixed(2)}</p>
         <h3>Total Estimado: R$ ${total.toFixed(2)}</h3>
         <p>Obrigado por pedir!</p>
     `;
