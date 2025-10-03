@@ -1,4 +1,5 @@
 
+
 const sabores = [
   { id: "calabresa", nome: "Calabresa", preco: 20 },
   { id: "pepperoni", nome: "Pepperoni", preco: 20 },
@@ -59,6 +60,15 @@ function procurarPorId(lista, idProcurado) {
   return null; 
 }
 preencherOpcoes();
+
+var vetorpacotesprontos = [
+   { id: 'calabresa', nome: 'inteira calabresa média com coca 2 litros', preco                    }
+ 
+
+
+
+
+]
 
 function gerarRelatorio() {
     const nome = document.getElementById("nome").value;
