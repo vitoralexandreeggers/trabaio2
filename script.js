@@ -1,133 +1,128 @@
-
-
-const sabores = [
-  { id: "calabresa", nome: "Calabresa", preco: 20 },
-  { id: "pepperoni", nome: "Pepperoni", preco: 20 },
-  { id: "queijos", nome: "quatro queijos", preco: 20 }
+const cardapio_loja = [
+    { id: "calabresa", pizza: " pizza inteira de calabresa - R$20.00 ", preco: 20.00},
+    { id: "Frango", pizza: " pizza de frango com catupiri - R$20.00 ", preco: 20.00},
+    { id: "Chocolate", pizza: " pizza de chocolate - R$20.00 ", preco: 20.00},
+    { id: "quatro queijos", pizza: " pizza de quatro queijos - R$20.00", preco: 20.00},
+    { id: "pepperoni", pizza: " Pizza de Pepperoni - R$20.00 ", preco: 20.00},
+    { id: "portuguesa", pizza: " Pizza portuguesa - R$20.00 ", preco: 20.00},
+    { id: "strogonoff", pizza: " Pizza de strogonff - R$20.00 ", preco: 20.00},
+    { id: "Nada", pizza: " Nada ", preco: 0.00},
 ];
 
-const tamanho = [
-  { id: "oitopedaço", nome: "8 pedaços", precoDiaria: 20 },
-  { id: "quatorzepedaço", nome: "14 pedaços", precoDiaria: 30 },
-  { id: "vintepedaço", nome: "20 pedaços", precoDiaria: 40 }
+const cardapio_loja_2 = [
+    { id: "refri", pizza: " Refrigerante - R$7,99 ", preco: 7.99 },
+    { id: "suco", pizza: " sucos - R$3,99 ", preco: 3.99 },
+    { id: "cerveja", pizza: " cervejas - R$8,99 ", preco: 8.99},
+    { id: "água", pizza: " agua - R$2,99 ", preco: 2.99},
+    { id: "Nada", pizza: " Nada ", preco: 0.00 },
 ];
 
-const bebidas = [
-  { id: "coca", nome: "refri", precoDiario: 8 },
-  { id: "brahma", nome: "cerveja", precoDiario: 5 },
-  { id: "mineral", nome: "agua", precoDiario: 3 }
+const tamanho_loja = [
+    { id: "Pequeno", tamanho: " Pequeno ", preco: 2.50 },
+    { id: "Médio", tamanho: " Médio ", preco: 5.00     },
+    { id: "Grande", tamanho: " Grande ", preco: 10.00  },
+    { id: "Gigante", tamanho: " Gigante ", preco: 15.00  }
 ];
 
-function preencherOpcoes() {
-  
-  const selectSabor = document.getElementById("sabor");
-  for (let i = 0; i < sabores.length; i++) {
-    const item = sabores[i];                 
-    const option = document.createElement("option"); 
-    option.value = item.id;                      
-    option.textContent = item.nome;              
-    selectSabor.appendChild(option);        
-  }
+const acompanhante_loja = [
+    { id: "porcaofrango", porcao: "porção de frango - R$ 10.00 ", preco: 10.00},
+    { id: "porcaopeixe", porcao: "porção de peixe - R$ 10.00 ", preco: 10.00  },
+    { id: "porcaobatata", porcao: "porção de batata - R$ 10.00 ", preco: 10.00  },
+    { id: "porcaocamarao", porcao: "porção de camarão - R$ 10.00 ", preco: 10.00  },
+    { id: "Nada", porcao: "Nenhum - R$ 0.00 ", preco: 0.00                }
+];
 
-  
-  const selectTamanho = document.getElementById("tamanho");
-  for (let i = 0; i < tamanho.length; i++) {
-    const item = tamanho[i];
-    const option = document.createElement("option");
-    option.value = item.id;
-    option.textContent = item.nome;
-    selectTamanho.appendChild(option);
-  }
 
-  
-  const selectBebidas = document.getElementById("bebida");
-  for (let i = 0; i < bebidas.length; i++) {
-    const item = bebidas[i];
-    const option = document.createElement("option");
-    option.value = item.id;
-    option.textContent = item.nome;
-    selectBebidas.appendChild(option);
-  }
+function preencher(){
+    const selectCardapio = document.getElementById("cardapio");
+     for (let i = 0; i < cardapio_loja.length; i++) {
+         const item = cardapio_loja[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.pizza;
+         selectCardapio.appendChild(option);
+    }
+
+    const selectCardapioww = document.getElementById("cardapioww");
+     for (let i = 0; i < cardapio_loja_2.length; i++) {
+         const item = cardapio_loja_2[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.pizza;
+         selectCardapioww.appendChild(option);
+    } 
+
+    const selectAcompanhante = document.getElementById("acompanhantee");
+     for (let i = 0; i < acompanhante_loja.length; i++) {
+         const item = acompanhante_loja[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.porcao;
+         selectAcompanhante.appendChild(option);
+    }
+
+
+    const selectTamanho = document.getElementById("tamanho");
+     for (let i = 0; i < tamanho_loja.length; i++) {
+         const item = tamanho_loja[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.tamanho.trim();
+         selectTamanho.appendChild(option);
+    }
+    
 }
+preencher();
 
 function procurarPorId(lista, idProcurado) {
-  for (let i = 0; i < lista.length; i++) {
-    if (lista[i].id === idProcurado) {
-      return lista[i]; 
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i].id === idProcurado) {
+            return lista[i];
+        }
     }
-  }
-  return null; 
+    return null;
 }
-preencherOpcoes();
-
-var VetorPacotesProntos = [
-   { id: 'calabresa', nome: 'inteira calabresa média com coca 2 litros', preco: 3 },
-   { id: 'pepperoni', nome: 'inteira pepperoni média com guaraná 2 litros', preco: 4},
-   { id: 'quatro', nome: 'inteira quatro queijos média com fanta 2 litros', preco: 5}
-
-];
-
-function procurarPorId(vetor, idProcurado){
-  var i;
-  for(i = 0; i < vetor.length; i++){
-    if(vetor[i].id === idProcurado){
-      return vetor[i];
-    }
-  }
-  return null;
-}
-
-function preencherPacotesProntos(){
-
-  var area = document.getElementById('area_de_pacotes_prontos');
-  area.innerHTML = '';
-
-  var i, pacote, linha;
-  for(i = 0; i < vetorPacotesProntos.length; i++){
-    pacote = vetorPacotesProntos[i];
-
-    linha  = '<label>';
-    linha += pacote.nome + ' — <strong>' + formatarReais(pacote.preco) + '</strong> ';
-    linha += '<input id="q_' + pacote.id + '" type="number" min="1" value="1" style="width:80px"> ';
-    linha += '<button class="no-print" onclick="adicionarPacoteProntoPorId(\'' + pacote.id + '\')">Adicionar</button> ';
-    linha += '<button class="no-print" onclick="removerPacoteProntoPorId(\'' + pacote.id + '\')">Remover 1</button>';
-    linha += '</label>';
-     area.innerHTML += linha;
-  }
-
-}
-
 
 function gerarRelatorio() {
-    const nome = document.getElementById("nome").value;
-    const enderecodocliente = document.getElementById("endereco").value;
-    const cepefe = document.getElementById("cepeefe").value;
-    const pagamento = document.getElementById("pagamento").value;
-    const saborId = document.getElementById("sabor").value;
+    const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Indefinido...";
+    const nomeId = document.getElementById("nome").value;   
+    const cpfId = document.getElementById("cpf").value;
+    const enderecoId = document.getElementById("endereco").value;
+    const numeroid = document.getElementById("numero").value;
+    const cardapioId = document.getElementById("cardapio").value;
+    const cardapioId_2 = document.getElementById("cardapioww").value;
     const tamanhoId = document.getElementById("tamanho").value;
-    const bebidasId = document.getElementById("bebida").value;
+    const acompanhanteId = document.getElementById("acompanhantee").value;
 
-    var saborr = procurarPorId(sabores, saborId);
-    var tamanhoo = procurarPorId(tamanho, tamanhoId);
-    var bebidaa = procurarPorId(bebidas, bebidasId);
+    const qtdCardapio = parseInt(document.getElementById("qtdCardapio").value) || 0;
+    const qtdCardapio2 = parseInt(document.getElementById("qtdCardapio2").value) || 0;
+    const qtdAcompanhante = parseInt(document.getElementById("qtdAcompanhante").value) || 0;
 
-    const custoSabor = saborr.preco 
-    const custoTamanho = tamanhoo.precoDiaria 
-    const custoBebidas = bebidaa.precoDiario 
-    const total = custoSabor + custoTamanho + custoBebidas;
+    var cardapioo = procurarPorId(cardapio_loja, cardapioId);
+    var cardapioww = procurarPorId(cardapio_loja_2, cardapioId_2);
+    var tamanhoo = procurarPorId(tamanho_loja, tamanhoId);
+    var acompanhantee = procurarPorId(acompanhante_loja, acompanhanteId);
 
-    const relatorioHTML = `
-        <h2>Relatório da Viagem</h2>
-        <p><strong>nome do cliente:</strong> ${nome}</p>
-        <p><strong>endereço do cliente:</strong> ${enderecodocliente}</p>
-        <p><strong>cpf do cliente:</strong> ${cepefe}</p>
-        <p><strong>forma de pagamento:</strong> ${pagamento}</p>
-        <p><strong>sabor:</strong> ${saborr.nome} - R$ ${custoSabor.toFixed(2)}</p>
-        <p><strong>tamanho:</strong> ${tamanhoo.nome} - R$ ${custoTamanho.toFixed(2)}</p>
-        <p><strong>bebida:</strong> ${bebidaa.nome} - R$ ${custoBebidas.toFixed(2)}</p>
-        <h3>Total Estimado: R$ ${total.toFixed(2)}</h3>
-        <p>Obrigado por pedir!</p>
+    const total = (cardapioo.preco * qtdCardapio) + 
+                  (cardapioww.preco * qtdCardapio2) + 
+                  (acompanhantee.preco * qtdAcompanhante) +
+                  tamanhoo.preco;
+                
+
+    const relatorioHTML =`
+       <h2>Relatório do Pedido</h2>
+       <p><strong>Comprador: </strong> ${nomeId} </p>
+       <p><strong>CPF: </strong> ${cpfId} </p>
+       <p><strong>Endereço: </strong> ${enderecoId} </p>
+      <p><strong>Numero: </strong> ${numeroid} </p>
+       <p><strong>Pizza: </strong> ${cardapioId} x${qtdCardapio} = R$ ${(cardapioo.preco * qtdCardapio).toFixed(2)}  </p>
+       <p><strong>bebidas: </strong> ${cardapioId_2} x${qtdCardapio2} = R$ ${(cardapioww.preco * qtdCardapio2).toFixed(2)}  </p>
+       <p><strong>porção: </strong> ${acompanhanteId} x${qtdAcompanhante} = R$ ${(acompanhantee.preco * qtdAcompanhante).toFixed(2)}  </p>
+       <p><strong>Tamanho: </strong> ${tamanhoId} = R$ ${tamanhoo.preco.toFixed(2)} </p>
+       <p><strong>Preço Total: </strong> R$ ${total.toFixed(2)} </p>
+       <p><strong>Modo de Pagamento: </strong> ${PagamentoId}</p>
+       <p>Obrigado por usar nosso site!</p>
     `;
-
+    
     document.getElementById("relatorio").innerHTML = relatorioHTML;
 }
