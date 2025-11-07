@@ -20,12 +20,12 @@ body{
 }
 
 .logo{
-    height: 300px;
+    height: 400px;
 }
 
 form {
   background: rgb(97, 13, 13);
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 20px 30px;
   border-radius: 20px;
@@ -54,7 +54,7 @@ fieldset {
 }
 
 header {
-  background-image: url(imagens/qualidade.);
+  background-image: url(imagens/via-pizzaria.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
