@@ -1,24 +1,24 @@
 const cardapio_loja = [
     { id: "calabresa", pizza: " pizza inteira de calabresa - R$20.00 ", preco: 20.00},
     { id: "Frango", pizza: " pizza de frango com catupiri - R$20.00 ", preco: 20.00},
-    { id: "Chocolate", pizza: " pizza de chocolate - R$20.00 ", preco: 20.00},
+    { id: "Chocolate", pizza: " pizza de chocolate - R$22.00 ", preco: 22.00},
     { id: "quatro queijos", pizza: " pizza de quatro queijos - R$20.00", preco: 20.00},
     { id: "pepperoni", pizza: " Pizza de Pepperoni - R$20.00 ", preco: 20.00},
-    { id: "portuguesa", pizza: " Pizza portuguesa - R$20.00 ", preco: 20.00},
-    { id: "strogonoff", pizza: " Pizza de strogonff - R$20.00 ", preco: 20.00},
+    { id: "portuguesa", pizza: " Pizza portuguesa - R$24.00 ", preco: 24.00},
+    { id: "strogonoff", pizza: " Pizza de strogonff - R$25.00 ", preco: 25.00},
     { id: "Nada", pizza: " Nada ", preco: 0.00},
 ];
 
 const cardapio_loja_2 = [
     { id: "refri", pizza: " Refrigerante - R$7,99 ", preco: 7.99 },
-    { id: "suco", pizza: " sucos - R$3,99 ", preco: 3.99 },
+    { id: "suco", pizza: " sucos - R$4,99 ", preco: 4.99 },
     { id: "cerveja", pizza: " cervejas - R$8,99 ", preco: 8.99},
     { id: "água", pizza: " agua - R$2,99 ", preco: 2.99},
     { id: "Nada", pizza: " Nada ", preco: 0.00 },
 ];
 
 const tamanho_loja = [
-    { id: "Pequeno", tamanho: " Pequeno ", preco: 2.50 },
+    { id: "Pequeno", tamanho: " Pequeno ", preco: 3.50 },
     { id: "Médio", tamanho: " Médio ", preco: 5.00     },
     { id: "Grande", tamanho: " Grande ", preco: 10.00  },
     { id: "Gigante", tamanho: " Gigante ", preco: 15.00  }
@@ -26,9 +26,9 @@ const tamanho_loja = [
 
 const acompanhante_loja = [
     { id: "porcaofrango", porcao: "porção de frango - R$ 10.00 ", preco: 10.00},
-    { id: "porcaopeixe", porcao: "porção de peixe - R$ 10.00 ", preco: 10.00  },
-    { id: "porcaobatata", porcao: "porção de batata - R$ 10.00 ", preco: 10.00  },
-    { id: "porcaocamarao", porcao: "porção de camarão - R$ 10.00 ", preco: 10.00  },
+    { id: "porcaopeixe", porcao: "porção de peixe - R$ 15.00 ", preco: 15.00  },
+    { id: "porcaobatata", porcao: "porção de batata - R$ 8.00 ", preco: 8.00  },
+    { id: "porcaocamarao", porcao: "porção de camarão - R$ 20.00 ", preco: 20.00  },
     { id: "Nada", porcao: "Nenhum - R$ 0.00 ", preco: 0.00                }
 ];
 
