@@ -13,6 +13,7 @@
   }
 }
 
+
 body{
     background-image: url(imagens/imagens3.jpg);
     height: 1000px;
@@ -77,6 +78,8 @@ button:hover {
 }
 
 footer {
+  background-image: url(Vetor.png);
+   height: 1000px;
   color: #000000;
 
 
