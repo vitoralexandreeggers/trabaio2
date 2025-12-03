@@ -9,24 +9,36 @@
 <body>
 <main>
     <header>
-        <img class="logo" src="imagens/La Parpinelli.png" alt="logotipo">
+
+        <form id="FormPizza" action="#" method="post">
+        <img class="logo" src="imagens/Design_sem_nome__3_-removebg-preview.png" alt="logotipo">
+        </form>
+
     </header>
+
 </main>
-    <form id="FormPastel" action="#" method="post">
+
+    <form id="FormPizza" action="#" method="post">
+
         <hr>
-        <h2>Informações Do Cliente</h2>
+
+   <h2 style="text-align: center;">Informações do cliente</h2>
+
         <label for="nome">Nome do Cliente: </label>
         <input type="text" name="Nome" id="nome" placeholder="Nome">
+
         <br>
         <br>
 
         <label for="cpf">CPF: </label>
         <input type="text" name="cpf" id="cpf" placeholder="CPF">
+
         <br>
         <br>
 
         <label for="endereco">Endereço: </label>
         <input type="text" name="endereço" id="endereco" placeholder="Endereço">
+        
         <br>
         <br>
 
@@ -34,53 +46,40 @@
         <input type="text" name="numerocliente" id="numero" placeholder="Numero">
 
         <hr>
-        
-        <h2>pedido do cliente</h2>
+ 
+<h2 style="text-align: center;">Pedido do cliente</h2>
+
+       <img class="carda" src="imagens/image.png" alt="cadapioo">
+
+       <br>
+       <br>
+
+       <hr>
+
+       <br>
+       <br>
+
         <label for="cardapio">Pizzas: </label>
          <select id="cardapio" name="cardapio"></select>
-         <input type="number" id="qtdCardapio" value="1" min="0">
         <br><br>
 
         <label for="cardapioww">bebidas: </label>
          <select id="cardapioww" name="cardapioww"></select>
-         <input type="number" id="qtdCardapio2" value="1" min="0">
        <br><br>
 
         <label for="acompanhantee">porções: </label>
          <select id="acompanhantee" name="acompanhantee"></select>
-         <input type="number" id="qtdAcompanhante" value="1" min="0">
        <br><br>
 
-        <label for="tamanho">Tamanho: </label>
-         <select id="tamanho" name="tamanho"></select>
-        <br><br>
+       <label>Forma de pagamento:
+      <select id="pagamento">
+        <option value="Dinheiro">dinheiro fisico</option>
+        <option value="Cartao">cartão</option>
+        <option value="pix">pix</option>
+      </select>
+    </label>
 
         <hr>
-
-        <fieldset>
-            <legend>Forma de Pagamento: </legend>
-
-            <label>
-              Pix<input type="radio" name="pagamento" value="Pix" id="pagamentow">
-            </label>
-
-            <label>
-              Débito<input type="radio" name="pagamento" value="Debito" id="pagamentow">
-            </label>
-
-            <label>
-              Crédito<input type="radio" name="pagamento" value="Credito" id="pagamentow">
-            </label>
-
-            <label>
-               Dinheiro<input type="radio" name="pagamento" value="Dinheiro" id="pagamentow">
-            </label>
-        </fieldset>
-        
-        <br>
-        <hr>
-        
-        
 
 </p>
     </form>
@@ -88,6 +87,7 @@
     <footer>
 
          <hr> 
+         
          <div id="relatorio"></div>
          <br>
          <button onclick="gerarRelatorio()">Gerar relatório do Pedido</button>
